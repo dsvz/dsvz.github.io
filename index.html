@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Shout out to http://www.marcofolio.net/webdesign/build_native-looking_apps_for_ios.html -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="description" content="Mage Knight Dummy Player">
+        <meta name="keywords" content="mage,knight,dummy,player,app,solo,cooperative">
+        <meta name="author" content="Kyle Reed">
+        <link rel="apple-touch-icon" href="content/icon.png" />
+        <link rel="icon" href="content/icon.png" />
+        <link rel="stylesheet" type="text/css" href="content/mk-dummy.css" />
+        <link rel="manifest" href="/app.webmanifest">
+        <script type="text/javascript" src="code/mk-dummy.js"></script>
+        <title>Mage Knight Helper</title>
+    </head>
+    <body>
+        <div id="content">
+            <div id="reset-button" title="Start Over"></div>
+            <div id="screen1">
+                <h1>Mage Knight<br />Dummy Player</h1>
+                <div>Select a character.</div>
+                <div id="character-select">
+                    <div id="char1" title="Norowas">Norowas</div>
+                    <div id="char2" title="Tovak">Tovak</div>
+                    <div id="char3" title="Goldyx">Goldyx</div>
+                    <div id="char4" title="Arythea">Arythea</div>
+                    <div id="char5" title="Wolfhawk">Wolfhawk</div>
+                    <div id="char6" title="Braevalar">Braevalar</div>
+                    <div id="char7" title="Krang">Krang</div>
+                </div>
+            </div>
+            <div id="screen2">
+                <h1 id="character-name">Character</h1>
+                <div id="character-group">
+                    <div id="portrait"></div>
+                    <div id="crystal-area">
+                        <div id="red-count" class="red-crystal" title="Red Crystals">0</div>
+                        <div id="green-count" class="green-crystal" title="Green Crystals">0</div>
+                        <div id="blue-count" class="blue-crystal" title="Blue Crystals">0</div>
+                        <div id="white-count" class="white-crystal" title="White Crystals">0</div>
+                    </div>
+                </div>
+                <hr />
+                <div id="card-area">
+                    <div>Cards Remaining</div>
+                    <div id="card-count">0</div>
+                    <div id="card-history">
+                        <div>
+                            <div class="red-card"></div>
+                            <div class="green-card"></div>
+                        </div>
+                        <div>
+                            <div class="blue-card"></div>
+                            <div class="white-card"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="button-area">
+                    <button id="play-turn-button" title="Play Turn">Play Turn</button>
+                    <button id="end-round-button" title="End Round">End Round</button>
+                </div>
+            </div>
+            <div id="screen3">
+                <h1>Add Mana Crystal</h1>
+                <div>Choose a crystal to add.</div>
+                <div id="new-crystal-select">
+                    <div id="new-mana-red" class="red-crystal" title="Red"></div>
+                    <div id="new-mana-green" class="green-crystal" title="Green"></div>
+                    <div id="new-mana-blue" class="blue-crystal" title="Blue"></div>
+                    <div id="new-mana-white" class="white-crystal" title="White"></div>
+                </div>
+            </div>
+            <div id="screen4">
+                <h1>Add New Card</h1>
+                <div>Choose a card to add.</div>
+                <div id="new-card-select">
+                    <div id="new-card-red" class="red-card" title="Red"></div>
+                    <div id="new-card-green" class="green-card" title="Green"></div>
+                    <div id="new-card-blue" class="blue-card" title="Blue"></div>
+                    <div id="new-card-white" class="white-card" title="White"></div>
+                </div>
+            </div>
+            <div id="screen5">
+                <h1>Mana Source</h1>
+                <div id="source">
+                    <div id="source-mana-1" class="red-mana"></div>
+                    <div id="source-mana-2" class="green-mana"></div>
+                    <div id="source-mana-3" class="blue-mana"></div>
+                </div>
+                <div id="button-area">
+                    <button id="roll-all-button">Roll All</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var context = new UIContext();
+            //runTest();
+        </script>
+    </body>
+</html>

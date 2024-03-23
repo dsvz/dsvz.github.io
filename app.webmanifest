@@ -1,0 +1,14 @@
+{
+   "name": "MK Helper",
+   "icons": [
+      {
+         "src": "content/icon.png",
+         "type": "image/png",
+         "sizes": "144x144"
+      }
+   ],
+   "start_url": "/",
+   "display": "standalone",
+   "theme_color": "black",
+   "background_color": "black"
+}
