@@ -509,6 +509,8 @@ function UIContext()
         button.onclick = this.handleSourceClick;
     }
 
+    document.getElementById("source-mana-4").onclick = this.handleSourceClick;
+
 
     document.getElementById("roll-all-button").onclick = () => {
         for (var i = 0; i < this.sourceButtons.length; i++)
