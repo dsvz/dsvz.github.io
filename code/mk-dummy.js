@@ -486,21 +486,26 @@ function UIContext()
         button.colorTag = i;
     }
 
+    let classes = [
+        "red-mana",
+        "blue-mana",
+        "green-mana",
+        "white-mana",
+        "gold-mana",
+        "black-mana"
+    ];
+
+    async function roll(button) {
+        for (i = 0; i < 20; i++) {
+            await new Promise(r => setTimeout(r, 40));
+            button.className = classes[Math.floor(Math.random() * classes.length)];
+        }
+    }
+
     // mana source click handler and binding
     this.handleSourceClick = async function()
     {
-        let classes = [
-            "red-mana",
-            "blue-mana",
-            "green-mana",
-            "white-mana",
-            "gold-mana",
-            "black-mana"
-        ];
-        for (i = 0; i < 20; i++) {
-            await new Promise(r => setTimeout(r, 40));
-            this.className = classes[Math.floor(Math.random() * classes.length)];
-        }
+        await roll(this);
     }
 
     for (var i = 0; i < this.sourceButtons.length; i++)
@@ -512,11 +517,11 @@ function UIContext()
     document.getElementById("source-mana-4").onclick = this.handleSourceClick;
 
 
-    document.getElementById("roll-all-button").onclick = () => {
+    document.getElementById("roll-all-button").onclick = async () => {
         for (var i = 0; i < this.sourceButtons.length; i++)
         {
             var button = this.sourceButtons[i];
-            button.click();
+            await roll(button);
         }
     };
 
